@@ -23,11 +23,27 @@ class TodoList extends Component<Props, State>{
 
     handleclickadd(e: any){
         e.preventDefault();
+        
+        if(this.state.task==="")
+        {
+              this.setState(
+                  {
+                      task: ""
+                  }
+              )
+        }
+        else{
         this.setState({
             task: this.state.task,
             tasks: [...this.state.tasks, this.state.task],
             showStats: true
         });
+
+        Array.from(document.querySelectorAll("input")).forEach(
+            input => (input.value = "")
+          );
+        }
+
         //console.log(this.state.tasks);
     }
 
@@ -39,11 +55,11 @@ class TodoList extends Component<Props, State>{
 
     render(){
         return(
-            <div>
+            <div className="homepage">
                 <form className = "form-display">
                     <h2>My TodoList</h2>
                     <input className = "input-display" type = "text" placeholder="Enter task"
-                    onChange = {event => this.setState({task: event.target.value})}/>
+                    onChange = {event => this.setState({task: (event.target.value)})}/>
                     <button className = "btn-display" onClick={this.handleclickadd.bind(this)}>Add Task</button>
                 </form>
                 {
