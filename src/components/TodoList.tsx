@@ -34,8 +34,8 @@ class TodoList extends Component<Props, State>{
         }
         else{
         this.setState({
-            task: this.state.task,
             tasks: [...this.state.tasks, this.state.task],
+            task: "",
             showStats: true
         });
 
@@ -60,7 +60,8 @@ class TodoList extends Component<Props, State>{
                     <h2>My TodoList</h2>
                     <input className = "input-display" type = "text" placeholder="Enter task"
                     onChange = {event => this.setState({task: (event.target.value)})}/>
-                    <button className = "btn-display" onClick={this.handleclickadd.bind(this)}>Add Task</button>
+                    <button className = "btn-display" 
+                    disabled={!this.state.task}onClick={this.handleclickadd.bind(this)}>Add Task</button>
                 </form>
                 {
                     this.state.showStats?

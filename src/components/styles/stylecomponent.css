@@ -1,3 +1,9 @@
+.body{
+    background:linear-gradient(rgba(250, 125, 54, 0.253),transparent);
+    background-color:orange; /*this your primary color*/
+    padding: 50%;
+}
+
 .form-display{
     padding: 50px;
     background-color: lavenderblush;
@@ -40,6 +46,6 @@
     align-content: center;
     position:absolute;
     left: 50%;
-    top: 50%;
+    top: 20%;
     transform: translate(-50%, -50%);
 }
