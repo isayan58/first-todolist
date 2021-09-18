@@ -1,0 +1,36 @@
+.form-display{
+    padding: 50px;
+    background-color: lavenderblush;
+}
+
+.input-display{
+    height: 30px;
+    font-size: 25px;
+    padding: 5px;
+    background-color: azure;
+}
+
+.btn-display{
+    padding: 10px;
+    height: 45px;
+    margin:inherit;
+    float:right;
+    font-weight: 100;
+    font-size: large;
+}
+
+.list{
+    background-color: azure;
+    align-content: center;
+    padding:2%;
+    padding-left: 10%;
+}
+
+.btn-list{
+    padding: 1px;
+    height: 25px;
+    margin:inherit;
+    float:right;
+    font-weight: 100;
+    font-size: 15px;
+}
